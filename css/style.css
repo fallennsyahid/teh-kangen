@@ -104,14 +104,18 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../assets/img/header-bg.jpg");
+  background-image: url("../assets/img/header-bg-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+  mask-image: linear-gradient(
+    rgba(245, 245, 220, 1) 90%,
+    rgba(255, 255, 201, 0)
+  );
 }
 
-.hero::after {
+/* .hero::after {
   content: "";
   display: block;
   position: absolute;
@@ -123,11 +127,15 @@ body {
     rgba(245, 245, 220, 1) 8%,
     rgba(255, 255, 201, 0) 35%
   );
-}
+} */
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  /* max-width: 60rem; */
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 100px;
 }
 
 .hero h1 {
@@ -197,6 +205,10 @@ body {
 
 .about .row .about-img img {
   width: 100%;
+  mask-image: url(../assets/img/two-tea-leaves.svg);
+  mask-size: 70%;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 .about .row .content {
